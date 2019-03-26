@@ -1,10 +1,10 @@
-setwd("D:/University of Wollongong/Chong/S3 - INFO911/Assignment/INFO911_Assignment 3_Projects/INFO911_Project 3_Files (REPORT)")
+setwd("D:/University of Wollongong/Data Mining project")
 
 # Load read netCDF file function
 library(ncdf4)
 
 # Import file into environment
-filePath <- "D:/University of Wollongong/Chong/S3 - INFO911/Assignment/INFO911_Assignment 3_Projects/INFO911_Project 3_Files (REPORT)/"
+filePath <- "D:/University of Wollongong/Data Mining project/"
 fileName <- "air.mon.anom"
 file <- paste(filePath, fileName, ".nc", sep = "")
 raw_data <- nc_open(file)
@@ -79,7 +79,7 @@ month_slice <- air_temp[,,month[[1]][50]] ## Number on the left side can be chan
 library(maps)
 
 # Set to Plots folder to create plots
-setwd("D:/University of Wollongong/Chong/S3 - INFO911/Assignment/INFO911_Assignment 3_Projects/INFO911_Project 3_Files (REPORT)/Plots")
+setwd("D:/University of Wollongong/Data Mining project/Plots")
 
 # Create list of month names
 month_name <- c("January", "February", "March", "April", "May", "June",
@@ -137,7 +137,7 @@ for (i in 1:12) {
 }
 
 # Return back to original folder
-setwd("D:/University of Wollongong/Chong/S3 - INFO911/Assignment/INFO911_Assignment 3_Projects/INFO911_Project 3_Files (REPORT)")
+setwd("D:/University of Wollongong/Data Mining project")
 
 # Calculate the percentage of missing values for each year
 temperature_vec <- as.vector(air_temp)
